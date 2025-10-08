@@ -1,84 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ariel Chiu | Homepage</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background-color: #fafafa;
-    }
-
-    /* Navigation Bar */
-    nav {
-      background-color: #333;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Main Content */
-    main {
-      padding: 60px 20px;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 15px;
-    }
-
-    img {
-      width: 80%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 10px;
-      margin: 20px 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    p {
-      font-size: 1.1em;
-      color: #555;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 60px;
-      padding: 15px 0;
-      background-color: #f0f0f0;
-      font-size: 0.9em;
-      color: #555;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://feifang.info/demystifying-ai-for-everyone-concepts-and-applications-fall-2025/" target="_blank">Course Link</a>
+    <div class="nav-inner container">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://feifang.info/demystifying-ai-for-everyone-concepts-and-applications-fall-2025/" target="_blank" rel="noopener">Course Link</a>
+    </div>
   </nav>
 
-  <main>
+  <main class="container">
     <h1>Ariel Chiu</h1>
-    
-    <img src="Giving Day Pic.jpeg" alt="Ariel Chiu and friends at a dance competition during Giving Day">
+
+    <img
+      class="responsive"
+      src="Giving Day Pic.jpeg"
+      alt="Ariel Chiu with friends posing after a dance competition performance"
+    />
 
     <p>
       I am a senior majoring in Information Systems. I have taken AI courses such as
@@ -86,7 +31,7 @@
     </p>
   </main>
 
-  <footer>
+  <footer class="container">
     <p>Today's date: <span id="date"></span></p>
   </footer>
 
