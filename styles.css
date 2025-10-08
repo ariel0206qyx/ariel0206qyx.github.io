@@ -1,1 +1,122 @@
+/* Base: legible on phones */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #555555;
+  --surface: #f4f4f5;
+  --link: #1d4ed8;    /* accessible blue */
+  --focus: #7aa2ff;   /* focus ring color */
+  --radius: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0c;
+    --text: #eaeaea;
+    --muted: #b5b5b5;
+    --surface: #151517;
+    --link: #93c5fd;
+    --focus: #bfdbfe;
+  }
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html:focus-within { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  /* Comfortable default size with graceful scaling */
+  font-size: clamp(16px, 1.6vw + 0.5rem, 18px);
+}
+
+/* Layout container for comfy line length on small screens */
+.container {
+  width: min(68ch, 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* Navigation */
+nav {
+  background: #1f2937; /* dark gray with good contrast */
+  color: #fff;
+}
+
+nav .nav-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  line-height: 1.2;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+}
+
+/* Headings & text */
+h1 {
+  font-size: clamp(1.8rem, 3.5vw + 1rem, 2.5rem);
+  margin: 1.25rem 0 0.5rem;
+}
+
+p {
+  color: var(--muted);
+  margin: 0.75rem 0 0;
+}
+
+/* Image: responsive and subtle polish */
+img.responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: 1rem auto;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Footer */
+footer {
+  margin-top: 2.5rem;
+  padding: 1rem 0.5rem 2rem;
+  color: var(--muted);
+  border-top: 1px solid var(--surface);
+}
+
+/* Accessible focus styles for all interactive elements */
+a, button, [tabindex]:not([tabindex="-1"]) {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Motion respect */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
 
