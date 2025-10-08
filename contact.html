@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Ariel Chiu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner container">
+      <a href="index.html">Home</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="https://feifang.info/demystifying-ai-for-everyone-concepts-and-applications-fall-2025/" target="_blank" rel="noopener">Course Link</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <p>If you’d like to get in touch, here’s how to reach me:</p>
+
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:xxx@gmail.com">xxx@gmail.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:412-xxx-xxxx">412-xxx-xxxx</a></li>
+      <li><strong>Address:</strong>
+        <address>5032 Forbes Avenue, Carnegie Mellon University</address>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="container">
+    <p>Today's date: <span id="date"></span></p>
+  </footer>
+
+  <script>
+    // Display today's date in the footer
+    const today = new Date();
+    document.getElementById("date").textContent = today.toDateString();
+  </script>
+
+</body>
+</html>
 
